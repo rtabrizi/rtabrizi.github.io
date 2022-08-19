@@ -164,6 +164,9 @@ collections:
   talks:
     output: true
     permalink: /:collection/:path/
+  reading:
+    output: true
+    permalink: /:collection/:path/
 
 
 # Defaults
