@@ -5,9 +5,9 @@ main:
   - title: "Reading Journey"
     url: /reading/
     
-  - title: "Teaching"
-    url: /teaching/    
+  # - title: "Projects"
+  #   url: /projects/    
     
-  - title: "Resume"
-    url: /resume/
+  # - title: "Resume"
+  #   url: /resume/
     
