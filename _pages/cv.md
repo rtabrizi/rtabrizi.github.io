@@ -53,6 +53,12 @@ Teaching
   <ul>{% for post in site.teaching %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
+
+Reading
+======
+  <ul>{% for post in site.reading %}
+    {% include archive-single-cv.html %}
+  {% endfor %}</ul>
   
 Service and leadership
 ======
