@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Ryan Tabrizi"
 title_separator          : "-"
 name                     : &name "Ryan Tabrizi"
-description              : &description "desc"
+description              : &description "EECS at UC Berkeley"
 url                      : https://rtabrizi.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "rtabrizi.github.io"
@@ -89,6 +89,7 @@ author:
   email            : rtabrizi@berkeley.edu
   github           : "rtabrizi"
   linkedin         : rtabrizi
+  goodreads        : https://www.goodreads.com/user/show/113259625-ryan-tabrizi
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   twitter          : # "replacethistwitterhandle"
   youtube          :
@@ -193,6 +194,15 @@ defaults:
   - scope:
       path: ""
       type: teaching
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comments: true
+  # _reading
+  - scope:
+      path: ""
+      type: reading
     values:
       layout: single
       author_profile: true
