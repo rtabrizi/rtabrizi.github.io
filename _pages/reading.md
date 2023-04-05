@@ -1,9 +1,17 @@
+---
 layout: archive
-title: "Reading"
 permalink: /reading/
-author_profile: true
+title: "Books I've Read"
 ---
 
-{% include base_path %}
-
-Reflections on the books I've read. 
+Test
+<!-- {% include base_path %}
+{% capture written_year %}'None'{% endcapture %}
+{% for post in site.books %}
+  {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+  {% if year != written_year %}
+    <h2 id="{{ year | slugify }}" class="archive__subtitle">{{ year }}</h2>
+    {% capture written_year %}{{ year }}{% endcapture %}
+  {% endif %}
+  {% include archive-single.html %}
+{% endfor %} -->

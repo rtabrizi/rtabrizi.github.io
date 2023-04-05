@@ -168,6 +168,10 @@ collections:
   reading:
     output: true
     permalink: /:collection/:path/
+  resume:
+    output: true
+    permalink: /:collection/:path/
+    
 
 
 # Defaults
@@ -199,6 +203,14 @@ defaults:
       author_profile: true
       share: true
       comments: true
+  # _resume
+  - scope:
+      path: ""
+      type: resume
+    values:
+      layout: resume
+      author_profile: true
+      share: true
   # _reading
   - scope:
       path: ""

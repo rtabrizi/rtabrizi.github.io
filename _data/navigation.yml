@@ -1,13 +1,16 @@
-# main links links
+# main links
 main:
-  
-    
-  - title: "Reading Journey"
+  - title: "Reading"
     url: /reading/
     
-  # - title: "Projects"
-  #   url: /projects/    
+  - title: "Projects"
+    url: /projects/    
     
-  # - title: "Resume"
-  #   url: /resume/
+  - title: "Resume"
+    url: /resume/
+
+  - title: "Teaching"
+    url: /teaching/
+
+
     
