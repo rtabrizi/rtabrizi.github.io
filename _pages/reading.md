@@ -1,7 +1,7 @@
 ---
 layout: archive
 permalink: /reading/
-title: "Books I've Read"
+title: "Some Books I've Read"
 ---
 
 {% include base_path %}

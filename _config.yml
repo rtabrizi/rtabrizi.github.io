@@ -213,16 +213,16 @@ defaults:
       layout: resume
       author_profile: true
       share: true
-  # # _reading
-  # - scope:
-  #     path: ""
-  #     type: reading
-  #   values:
-  #     layout: single
-  #     author_profile: true
-  #     share: true
-  #     comments: true
-  # _publications
+  # _reading
+  - scope:
+      path: ""
+      type: reading
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comments: true
+  _publications
   - scope:
       path: ""
       type: publications
