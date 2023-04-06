@@ -4,8 +4,7 @@ permalink: /reading/
 title: "Books I've Read"
 ---
 
-Test
-<!-- {% include base_path %}
+{% include base_path %}
 {% capture written_year %}'None'{% endcapture %}
 {% for post in site.books %}
   {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
@@ -14,4 +13,4 @@ Test
     {% capture written_year %}{{ year }}{% endcapture %}
   {% endif %}
   {% include archive-single.html %}
-{% endfor %} -->
+{% endfor %}

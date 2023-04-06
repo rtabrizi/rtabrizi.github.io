@@ -4,6 +4,4 @@ title: "Resume"
 permalink: /resume/
 author_profile: true
 ---
-<object data="files/TabriziRyanResume.pdf" type="application/pdf">
-    <embed src="files/TabriziRyanResume.pdf" type="application/pdf" />
-</object>>
+<embed src="{{ rtabrizi.github.io }}/files/TabriziRyanResume.pdf" width="600" height="700" type='application/pdf'>

@@ -1,16 +1,24 @@
 # main links
 main:
-  - title: "Reading"
-    url: /reading/
-    
+  - title: "About"
+    url: /about/    
+
   - title: "Projects"
     url: /projects/    
     
   - title: "Resume"
-    url: /resume/
+    url: /files/TabriziRyanResume.pdf?zoom=75
+    target: "_blank"
 
-  - title: "Teaching"
-    url: /teaching/
+  - title: "Reading"
+    url: /reading/
+    
 
+  # - title: "Thoughts"
+  #   url: /year-archive/
+
+
+
+  #[Resume]({{rtabrizi@github.io}}/files/TabriziRyanResume.pdf)
 
     
