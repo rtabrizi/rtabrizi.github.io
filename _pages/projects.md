@@ -1,5 +1,4 @@
 ---
-permalink: /
 title: "Projects"
 excerpt: "Some Projects of Mine"
 redirect_from: 
