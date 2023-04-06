@@ -1,6 +1,7 @@
 ---
 title: "Projects"
 excerpt: "Some Projects of Mine"
+permalink: /projects/
 redirect_from: 
   - /project/
   - /projects.html
