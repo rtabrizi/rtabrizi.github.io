@@ -4,15 +4,13 @@ main:
     url: /about/    
 
   - title: "Projects"
-    url: /projects/    
+    url: /projects/
     
   - title: "Resume"
-    url: /files/TabriziRyanResume.pdf?zoom=75
-    target: "_blank"
+    url: /files/TabriziRyanResume.pdf/?zoom=50
 
-  - title: "Reading"
-    url: /reading/
-    
+  # - title: "Reading"
+  #   url: /reading/
 
   # - title: "Thoughts"
   #   url: /year-archive/

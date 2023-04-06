@@ -29,7 +29,7 @@ comments:
   facebook:
     appid                :
     num_posts            : # 5 (default)
-    colorscheme          : # "light" (default), "dark"
+    t # "light" (default), "dark"
 staticman:
   allowedFields          : ['name', 'email', 'url', 'message']
   branch                 : "gh-pages" # "master", "gh-pages"
@@ -82,7 +82,7 @@ analytics:
 author:
   name             : "Ryan Tabrizi"
   avatar           : "TabriziRyan.png"
-  bio              : "Studying EECS at UC Berkeley. Interested in all things CV and ML!"
+  bio              : "EECS at UC Berkeley. Interested in all things CV and ML!"
   location         : "Palo Alto, CA"
   employer         :
   googlescholar    : # "http://yourfullgooglescholarurl.com"
@@ -170,6 +170,9 @@ collections:
     output: true
     permalink: /:collection/:path/
   resume:
+    output: true
+    permalink: /:collection/:path/
+  projects:
     output: true
     permalink: /:collection/:path/
     
@@ -268,6 +271,7 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-redirect-from
+  # - jekyll-remote-theme
 # mimic GitHub Pages with --safe
 whitelist:
   - jekyll-paginate
