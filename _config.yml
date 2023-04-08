@@ -55,7 +55,7 @@ alexa_site_verification  :
 yandex_site_verification :
 
 # Social Sharing
-twitter:
+twitter                  :
   username               : &twitter
 facebook:
   username               :
@@ -90,7 +90,7 @@ author:
   linkedin         : rtabrizi
   goodreads        : 113259625-ryan-tabrizi
   stackoverflow    : # http://stackoverflow.com/users/123456/username
-  twitter          : # ryantabrizi
+  twitter          : ryantabrizi
   youtube          :
 
 
