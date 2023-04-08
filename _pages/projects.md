@@ -6,6 +6,11 @@ redirect_from:
   - /project/
   - /projects.html
 ---
+### [Learning Playground](https://github.com/rtabrizi/learning "Github"):
+
+A kinda unorganized repo that documents the different experiments and tutorials I complete from time to time. Andrej karpathy's a big advocate for documenting your learning as you go, so this is a step in that direction! I hope to organize it more in the near future and perhaps add educational content of my own!
+
+---
 
 ### [ReScrape](https://github.com/rtabrizi/rescrape "Github"):
 Scraping for re(search) opportunities.
