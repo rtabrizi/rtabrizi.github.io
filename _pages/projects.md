@@ -31,9 +31,9 @@ A project by [Launchpad](https://launchpad.berkeley.edu) at Berkeley, Phodexr le
 ### [SensorTile: Gait Classification](https://github.com/ArunanElamaran/STM_Walk_Motion_Classification):
 Gait Classification with STMicroelectronics's STM32Cube
 
-<img src="/images/stm_blog.png" alt="Phodexr" width="265" height="200">
+<img src="/images/stm_blog.png" alt="Blog Post Preview" width="400" height="300">
 
-Upon completing UCLA's ENGR 96C IoT course, several of my classmates and I utilized the SensorTile for gait classification between stair ascent, descent, and neutral walking. A blog post of our work can be found [here](https://blog.st.com/gait-classification/) and our paper can be found [here](https://docs.google.com/document/d/1Dmv1CYLk1WCE3NKRKtIhUC5z8HT66Ppcb2JrxmMr3K4/edit?usp=sharing)
+Upon completing UCLA's ENGR 96C IoT course, several of my classmates and I utilized the SensorTile for gait classification between stair ascent, descent, and neutral walking. A blog post of our work can be found [here](https://blog.st.com/gait-classification/) and our paper can be found [here](https://docs.google.com/document/d/1Dmv1CYLk1WCE3NKRKtIhUC5z8HT66Ppcb2JrxmMr3K4/edit?usp=sharing).
 
 ---
 
