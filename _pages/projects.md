@@ -28,7 +28,7 @@ Scraping for re(search) opportunities.
 A short python script with BeautifulSoup4 to scrape ML conferences and query for any professor, university, or topic of choice. I had made this to find potential research advisers through their published work rather than their (relatively outdated) personal pages.
 
 ## [Phodexr](https://callaunchpad.github.io/phodexr/):
-Photo Indexing!
+### Photo Indexing!
 
 <img src="/images/phodexr.png" alt="Phodexr" width="265" height="200">
 
