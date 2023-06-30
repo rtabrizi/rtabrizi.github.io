@@ -167,7 +167,7 @@ collections:
   reading:
     output: true
     permalink: /:collection/:path/
-  CV:
+  resume:
     output: true
     permalink: /:collection/:path/
   projects:
