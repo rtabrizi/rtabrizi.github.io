@@ -81,7 +81,8 @@ analytics:
 author:
   name             : "Ryan Tabrizi"
   avatar           : "cafe.png"
-  bio              : "EECS at UC Berkeley. Interested in all things CV and ML!"
+  bio              : "Research Scientist at insitro
+   EECS at UC Berkeley"
   location         : "Palo Alto, CA"
   employer         :
   googlescholar    : # "http://yourfullgooglescholarurl.com"
@@ -100,6 +101,7 @@ include:
   - _pages
   - files
   - '*.pdf'
+  - _includes
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -162,13 +164,16 @@ collections:
   portfolio:
     output: true
     permalink: /:collection/:path/
-  talks:
+  reading:
     output: true
     permalink: /:collection/:path/
   resume:
     output: true
     permalink: /:collection/:path/
   projects:
+    output: true
+    permalink: /:collection/:path/
+  books:
     output: true
     permalink: /:collection/:path/
   
@@ -212,14 +217,14 @@ defaults:
       layout: resume
       author_profile: true
       share: true
-  # # _reading
-  # - scope:
-  #     path: ""
-  #     type: reading
-  #   values:
-  #     layout: single
-  #     author_profile: true
-  #     share: true
+  # _reading
+  - scope:
+      path: ""
+      type: books
+    values:
+      layout: reading
+      author_profile: true
+      share: true
       comments: true
   # _publications
   - scope:

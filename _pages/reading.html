@@ -1,0 +1,20 @@
+---
+layout: archive
+title: Some Books I've Read
+author_profile: true
+permalink: /reading/
+---
+{% include base_path %}
+
+For the most updated list, please visit my <a href="https://www.goodreads.com/user/show/113259625-ryan-tabrizi">Goodreads Page!</a> This list was compiled mid-2023. Reviews of books from before then were written from faint memories.
+
+<div class="reading-list">
+  {% assign sorted_books = site.books | sort: 'date' | reverse %}
+  {% for book in sorted_books %}
+    <div class="book">
+      <h2><a href="{{ book.url }}">{{ book.title }}</a></h2>
+      <p><strong>Author:</strong> {{ book.author }}</p>
+      <p><strong>Finished Reading:</strong> {{ book.date | date: "%B %d, %Y" }}</p>
+    </div>
+  {% endfor %}
+</div>

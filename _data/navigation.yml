@@ -5,10 +5,13 @@ main:
 
   - title: "Projects"
     url: /projects/
-    
-  - title: "Resume"
-    url: /files/resume.pdf
 
-  # - title: "Reading"
-  #   url: /reading/
+  - title: "Reading"
+    url: /reading/
+    
+  - title: "CV"
+    #url: /files/resume.pdf
+    url: /cv
+
+  
     
