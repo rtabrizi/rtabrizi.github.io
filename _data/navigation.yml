@@ -10,8 +10,8 @@ main:
     url: /reading/
     
   - title: "CV"
-    #url: /files/resume.pdf
-    url: /cv/
+    url: /files/resume.pdf
+    #url: /cv/
 
   
     
