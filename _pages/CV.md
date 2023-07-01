@@ -7,4 +7,4 @@ redirect_from:
   - /resume/
 ---
 
-[This CV](/files/resume.pdf) is likely outdated. If you're interested in a more updated version, please send me an email. Thank you!
+If you're interested in seeing my CV, please send me an email. Thank you!

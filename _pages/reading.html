@@ -11,10 +11,12 @@ For the most updated list, please visit my <a href="https://www.goodreads.com/us
 <div class="reading-list">
   {% assign sorted_books = site.books | sort: 'date' | reverse %}
   {% for book in sorted_books %}
-    <div class="book">
-      <h2><a href="{{ book.url }}">{{ book.title }}</a></h2>
-      <p><strong>Author:</strong> {{ book.author }}</p>
-      <p><strong>Finished Reading:</strong> {{ book.date | date: "%B %d, %Y" }}</p>
-    </div>
+    {% if book.ready == true %}
+      <div class="book">
+        <h2><a href="{{ book.url }}">{{ book.title }}</a></h2>
+        <p><strong>Author:</strong> {{ book.author }}</p>
+        <p><strong>Finished Reading:</strong> {{ book.date | date: "%B %d, %Y" }}</p>
+      </div>
+    {% endif %}
   {% endfor %}
 </div>
