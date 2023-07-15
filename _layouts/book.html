@@ -7,8 +7,8 @@ layout: default
     <header class="book__header">
       <h1 class="book__title">{{ page.title }}</h1>
       <p class="book__author"><strong>Author:</strong> {{ page.author }}</p>
-      <p class="book__pages"><strong>Number of Pages:</strong> {{ page.pages }}</p>
       <p class="book__date"><strong>Finished Reading:</strong> {{ page.date | date: "%B %d, %Y" }}</p>
+      <p class="book__pages"><strong>Number of Pages:</strong> {{ page.pages }}</p>
     </header>
     <div class="book__content">
       {{ content }}

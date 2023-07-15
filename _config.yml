@@ -176,6 +176,9 @@ collections:
   books:
     output: true
     permalink: /:collection/:path/
+  thoughts:
+    output: true
+    permalink: /:collection/:path/
   
     
 

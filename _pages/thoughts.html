@@ -1,0 +1,27 @@
+---
+layout: archive
+title: Some Random Thoughts
+author_profile: true
+permalink: /randomthoughts/
+---
+Some thoughts here and there.
+
+{% include base_path %}
+
+<style>
+    .thought-container {
+      margin-bottom: 20px;
+    }
+    .thought-title {
+      margin-bottom: 2px;
+    }
+    </style>
+    
+    {% assign sorted_thoughts = site.thoughts | sort: 'date' | reverse %}
+    
+    {% for thought in sorted_thoughts %}
+      <div class="thought-container">
+        <h2 class="thought-title"><a href="{{ thought.url }}">{{ thought.title }}</a></h2>
+        <h3>{{ thought.date | date: "%B %d, %Y" }}</h3>
+      </div>
+    {% endfor %}
