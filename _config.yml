@@ -225,7 +225,7 @@ defaults:
       path: ""
       type: books
     values:
-      layout: reading
+      layout: book
       author_profile: true
       share: true
       comments: true

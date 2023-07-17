@@ -4,20 +4,68 @@ title: Some Books I've Read
 author_profile: true
 permalink: /reading/
 ---
+
 {% include base_path %}
 
-For the most updated list, please visit my <a href="https://www.goodreads.com/user/show/113259625-ryan-tabrizi">Goodreads Page!</a> 
-This list was compiled mid-2023. Reviews of books from before then were written from faint memories. <strong>Note:</strong> reflections might contain spoilers.
+For the most updated list, please visit my <a href="https://www.goodreads.com/user/show/113259625-ryan-tabrizi">Goodreads Page!</a>
+This list was compiled mid-2023. Reviews of books from before then were written from faint memories.
+
+<br> <br>
+
+<!-- Add a button to show all books -->
+<button id="toggleButton">Show All Books</button>
 
 <div class="reading-list">
   {% assign sorted_books = site.books | sort: 'date' | reverse %}
   {% for book in sorted_books %}
-    {% if book.ready == true %}
+    {% if book.ready %}
       <div class="book">
-        <h2><a href="{{ book.url }}">{{ book.title }}</a></h2>
+        <h2>
+          {% if book.url %}
+            <a href="{{ book.url }}">{{ book.title }}</a>
+          {% else %}
+            {{ book.title }}
+          {% endif %}
+          {% if book.spoilers %}
+            <span class="spoiler-warning">Spoilers</span>
+          {% endif %}
+        </h2>
+        <p><strong>Author:</strong> {{ book.author }}</p>
+        <p><strong>Finished Reading:</strong> {{ book.date | date: "%B %d, %Y" }}</p>
+      </div>
+    {% else %}
+      <div class="book not-ready" style="display: none;">
+        <h2>{{ book.title }}</h2>
         <p><strong>Author:</strong> {{ book.author }}</p>
         <p><strong>Finished Reading:</strong> {{ book.date | date: "%B %d, %Y" }}</p>
       </div>
     {% endif %}
   {% endfor %}
 </div>
+
+<script>
+  var button = document.getElementById("toggleButton");
+  var notReadyBooks = document.querySelectorAll(".not-ready");
+  
+  button.addEventListener("click", function() {
+    if (button.innerText === "Show All Books") {
+      button.innerText = "Show Reviewed Books";
+      notReadyBooks.forEach(function(book) {
+        book.style.display = "block";
+      });
+    } else {
+      button.innerText = "Show All Books";
+      notReadyBooks.forEach(function(book) {
+        book.style.display = "none";
+      });
+    }
+  });
+</script>
+
+<style>
+  .spoiler-warning {
+    color: red;
+    font-size: 14px;
+    margin-left: 10px;
+  }
+</style>
