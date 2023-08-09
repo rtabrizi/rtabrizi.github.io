@@ -8,6 +8,11 @@ redirect_from:
   - /projects.html
 ---
 
+## <a href="../files/ConvexPolytopes.pdf">Convex Polytopes Are All You Need</a> 
+### Technical Report
+
+We took a deep dive into a [SOTA defense against adversarial attacks](https://arxiv.org/abs/1711.00851) which uses duality as a proof of defense against adversarial agents.
+
 ## [Sentieye 🧿](https://devpost.com/software/sentieye)
 ### Cal Hacks '23:
 
@@ -22,9 +27,6 @@ Eye tracking and sentiment analysis from your own Zoom conference! Sentieye uses
     <img src="/images/alberto.gif" alt="Sentieye" width="400" height="300">
   </div>
 </div>
-
-
-
 
 <!-- <img src="/images/alberto.gif" alt="Sentieye" width="400" height="300">
 
