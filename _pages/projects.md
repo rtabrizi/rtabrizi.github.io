@@ -11,7 +11,7 @@ redirect_from:
 ## <a href="../files/ConvexPolytopes.pdf">Convex Polytopes Are All You Need</a> 
 ### Technical Report
 
-We took a deep dive into a [SOTA defense against adversarial attacks](https://arxiv.org/abs/1711.00851) which uses duality as a proof of defense against adversarial agents.
+We took a deep dive into a [SOTA defense against adversarial attacks](https://arxiv.org/abs/1711.00851) which uses duality as a proof of defense against adversarial agents. **This is a draft**. 
 
 ## [Sentieye 🧿](https://devpost.com/software/sentieye)
 ### Cal Hacks '23:
