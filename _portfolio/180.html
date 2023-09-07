@@ -1,0 +1,192 @@
+---
+title: Colorizing the Prokudin-Gorskii Photo Collection
+
+permalink: projects/180.html
+author_profile: true
+layout: archive
+---
+
+<p>Prokudin-Gorskii's early 1900s collection features almost 2,000 imaged scenes, each of which consists of 3 glass negatives (for each color channel). 
+    The hope was to be able to align these plates and observe images in RGB.</p>
+    <style>
+        .main-figure {
+            text-align: center; /* To center the main caption */
+        }
+    
+        .image-container {
+            display: flex;
+        }
+    
+        .subfigure img {
+            max-height: 500px;
+            max-width: 100%;
+            width: auto;
+            height: auto;
+        }
+    
+        .subfigure {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 20px; /* Adding some space between subfigures */
+        }
+    
+        .image-container div {
+            flex: 1;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+    
+        figcaption {
+            color: #007BFF;
+        }
+    
+        .main-caption {
+            margin-top: 20px; /* Add some spacing above the main caption */
+        }
+    </style>
+    
+    
+    <div class="main-figure">
+        <div class="image-container">
+            <div class="subfigure">
+                <img src="/data/cathedral3.jpg" alt="A Cathedral">
+                <figcaption>A cathedral</figcaption>
+            </div>
+            <div class="subfigure">
+                <img src="/data/emir3.jpg" alt="Emir of Bukhara">
+                <figcaption>Emir of Bukhara</figcaption>
+            </div>
+        </div>
+        <figcaption class="main-caption">Glass negatives of scenes (BGR from top to bottom)</figcaption>
+    </div>
+    
+    <head> <h2> Main Idea</h2> </head>
+
+    If we can crop these images into the three respecti blue, green, and red channels (from top to bottom) and we can align these channels, then we should get a coherent RGB image.
+
+    <head> <h2>Initial Approach</h2> </head>
+
+    We can do some naive 3-way vertical splitting to get rough crops of our 3 color channels. This is as simple as splitting the height by 3 into 3 crops.
+
+    If we define B to be our baseline, we can align B and R, as well as B and G and stack these results with our original B channel and get our RGB image.
+
+    To align these cropped channels, we can perform a sweep of channel shifts (optimizing over a loss) and choose the shift that minimizes our loss. 
+
+    In this particular implementation, I sweep over a range of (-15, 15) in both cartesian directions and roll the pixel values such that any pixels affected by the offset are propagated to the other edge of the image. 
+
+    If you consider the sum of square distances, notice how we simply subtract the raw pixel values/brightnesses which, when optimized over, doesn't necessarily converge to an aligned image. 
+
+    Image pixels aren't simply a function of the object's brightness and must account for other features as well. As a solution, we can use a normalized cross-convolution loss which aims to measure the structural similarity of objects in an image.
+
+    <head> <h2>Large Images: Refining Our Approach</h2> </head>
+
+    A search space of 30 * 30 = 900 pixels is not feasible for large images on the order of 80+ mb. I optimized my code as much as possible through vectorization and cropping but this still proved too exhaustive. As a solution, we can employ an image pyramid which performs sweeps increasing in search space as we decrease the image resolution.
+
+    If we perform an exhaustive enough search at a low resolution, we can take our displacement vector and scale it by our rescaling factor, getting us a displacement for the next finest resolution.
+
+    We can do this for an arbitrary number of levels, but I primarily stick with 3 for small images (< 1mb) and 5 for large images (>>>> 1mb). Another clever trick I was recommended was to align the red channel with green, and then align green with blue, and account for that additional shift in the red offset. In doing so, we have a 3-way alignment scheme going on instead of both red and green aligning to blue.
+
+    <head> <h2>Results</h2> </head>
+
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+
+        <div>
+            <img src="/data/onion_church.jpg" alt="Onion Church">
+            <figcaption>Onion Church - Red: (112, 48), Green: [48, 32]</figcaption>
+        </div>
+        <div>
+            <img src="/data/boat.jpg" alt="Boat">
+            <figcaption>Boat - Red: (144, 32), Green: [64, 16]</figcaption>
+        </div>
+        <div>
+            <img src="/data/icon.jpg" alt="Icon">
+            <figcaption>Icon - Red: (96, 16), Green: [48, 16]</figcaption>
+        </div>
+        <div>
+            <img src="/data/train.jpg" alt="Train">
+            <figcaption>Train - Red: (96, 32), Green: [48, 0]</figcaption>
+        </div>
+        <div>
+            <img src="/data/castle.jpg" alt="Castle">
+            <figcaption>Castle - Red: (144, 32), Green: [64, 16]</figcaption>
+        </div>
+        <div>
+            <img src="/data/melons.jpg" alt="Melons">
+            <figcaption>Melons - Red: (176, 16), Green: [80, 16]</figcaption>
+        </div>
+        <div>
+            <img src="/data/shed.jpg" alt="Shed">
+            <figcaption>Shed - Red: (80, 32), Green: [32, 16]</figcaption>
+        </div>
+        <div>
+            <img src="/data/three_generations.jpg" alt="Three Generations">
+            <figcaption>Three Generations - Red: (112, 16), Green: [48, 16]</figcaption>
+        </div>
+        <div>
+            <img src="/data/church.jpg" alt="Church">
+            <figcaption>Church - Red: (48, -16), Green: [16, 0]</figcaption>
+        </div>
+        <div>
+            <img src="/data/emir.jpg" alt="Emir">
+            <figcaption>Emir - Red: (96, 48), Green: [48, 32]</figcaption>
+        </div>
+        <div>
+            <img src="/data/lady.jpg" alt="Lady">
+            <figcaption>Lady - Red: (112, 16), Green: [48, 16]</figcaption>
+        </div>
+        <div>
+            <img src="/data/sculpture.jpg" alt="Sculpture">
+            <figcaption>Sculpture - Red: (144, -32), Green: [32, -16]</figcaption>
+        </div>
+        <div>
+            <img src="/data/monastery.jpg" alt="Monastery">
+            <figcaption>Monastery - Red: (-2, 0), Green: [-6, 0]</figcaption>
+        </div>
+        <div>
+            <img src="/data/cathedral.jpg" alt="Cathedral">
+            <figcaption>Cathedral - Red: (12, 4), Green: [4, 4]</figcaption>
+        </div>
+        <div>
+            <img src="/data/tobolsk.jpg" alt="Tobolsk">
+            <figcaption>Tobolsk - Red: (8, 4), Green: [4, 4]</figcaption>
+        </div>
+        <div>
+            <img src="/data/ranch.jpg" alt="Ranch">
+            <figcaption>Ranch - Red: (128, 64), Green: [64, 32]</figcaption>
+        </div>
+        <div>
+            <img src="/data/harvesters.jpg" alt="Harvesters">
+            <figcaption>Harvesters - Red: (128, 16), Green: [64, 16]</figcaption>
+        </div>
+        <div>
+            <img src="/data/self_portrait.jpg" alt="Self Portrait">
+            <figcaption>Self Portrait - Red: (176, 32), Green: [80, 32]</figcaption>
+        </div>
+    
+    </div>
+    
+
+    <head> <h2>Bells and Whistles</h2> </head>
+
+    I still noticed some artifacts after pyramid search and decided to use edge detection for better alignment. I employed 3 different filters: Canny, Gaussian, and Sobel. I found Canny to be the best, and you can find the results displayed below. 
+
+    If you look closely to the left-most person and the outline of their clothes, you can notice that the red outline has been removed!
+
+    <div class="main-figure">
+        <div class="image-container">
+            <div class="subfigure">
+                <img src="/data/three_generations.jpg" alt="Unfiltered">
+                <figcaption>Three generations (unfiltered) - Red: (32, 16), Green: [64, 16]</figcaption>
+            </div>
+            <div class="subfigure">
+                <img src="/data/three_generations_corrected.jpg" alt="Filtered">
+                <figcaption>Three generations (filtered) - Red: (112, 16), Green: [48, 16]</figcaption>
+            </div>
+        </div>
+        <figcaption class="main-caption">Side by side of edge edge detection via filtering</figcaption>
+    </div>
+
+Edge detection is far more robust to color channels, especially when such color channels aren't strong signals w.r.t each other. In comparing edges via filtering, we circumvent this issue.

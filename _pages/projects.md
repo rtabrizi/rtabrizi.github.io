@@ -7,6 +7,7 @@ redirect_from:
   - /project/
   - /projects.html
 ---
+## [Colorizing the Prokudin-Gorskii Photo Collection](../projects/180.html)
 
 ## <a href="../files/ConvexPolytopes.pdf">Convex Polytopes Are All You Need</a> 
 ### Technical Report
@@ -20,7 +21,7 @@ Eye tracking and sentiment analysis from your own Zoom conference! Sentieye uses
 
 <div style="display: flex;">
   <div style="flex: 1;">
-    <img src="/images/sentieye.png" alt="Sentieye" width="400"
+    <img src="/data/sentieye.png" alt="Sentieye" width="400"
     height="300">
   </div>
   <div style="flex: 1;">
