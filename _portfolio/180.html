@@ -62,11 +62,11 @@ layout: archive
         <figcaption class="main-caption">Glass negatives of scenes (BGR from top to bottom)</figcaption>
     </div>
     
-    <head> <h2> Main Idea</h2> </head>
+    <h2> Main Idea</h2>
 
-    If we can crop these images into the three respecti blue, green, and red channels (from top to bottom) and we can align these channels, then we should get a coherent RGB image.
+    If we can crop these images into the three respective blue, green, and red channels (from top to bottom) and we can align these channels, then we should get a coherent RGB image.
 
-    <head> <h2>Initial Approach</h2> </head>
+    <h2>Initial Approach</h2>
 
     We can do some naive 3-way vertical splitting to get rough crops of our 3 color channels. This is as simple as splitting the height by 3 into 3 crops.
 
@@ -80,7 +80,7 @@ layout: archive
 
     Image pixels aren't simply a function of the object's brightness and must account for other features as well. As a solution, we can use a normalized cross-convolution loss which aims to measure the structural similarity of objects in an image.
 
-    <head> <h2>Large Images: Refining Our Approach</h2> </head>
+    <h2>Large Images: Refining Our Approach</h2>
 
     A search space of 30 * 30 = 900 pixels is not feasible for large images on the order of 80+ mb. I optimized my code as much as possible through vectorization and cropping but this still proved too exhaustive. As a solution, we can employ an image pyramid which performs sweeps increasing in search space as we decrease the image resolution.
 
@@ -88,7 +88,7 @@ layout: archive
 
     We can do this for an arbitrary number of levels, but I primarily stick with 3 for small images (< 1mb) and 5 for large images (>>>> 1mb). Another clever trick I was recommended was to align the red channel with green, and then align green with blue, and account for that additional shift in the red offset. In doing so, we have a 3-way alignment scheme going on instead of both red and green aligning to blue.
 
-    <head> <h2>Results</h2> </head>
+    <h2>Results</h2>
 
     <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
 
@@ -167,7 +167,7 @@ layout: archive
     </div>
     
 
-    <head> <h2>Bells and Whistles</h2> </head>
+    <h2>Bells and Whistles</h2>
 
     I still noticed some artifacts after pyramid search and decided to use edge detection for better alignment. I employed 3 different filters: Canny, Gaussian, and Sobel. I found Canny to be the best, and you can find the results displayed below. 
 
