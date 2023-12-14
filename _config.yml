@@ -81,16 +81,15 @@ analytics:
 author:
   name             : "Ryan Tabrizi"
   avatar           : "cafe.png"
-  bio              : "Research Scientist at insitro
-   EECS at UC Berkeley"
+  bio              : "ML Researcher at UC Berkeley\nResearch Scientist at insitro"
   location         : "Palo Alto, CA"
   employer         :
-  googlescholar    : # "http://yourfullgooglescholarurl.com"
+  googlescholar    : "https://scholar.google.com/citations?hl=en&user=hiYyd-4AAAAJ&view_op=list_works"
   email            : rtabrizi@berkeley.edu
   github           : "rtabrizi"
   linkedin         : rtabrizi
   goodreads        : 113259625-ryan-tabrizi
-  stackoverflow    : # http://stackoverflow.com/users/123456/username
+  stackoverflow    : 
   twitter          : ryan_tabrizi
   youtube          :
 
