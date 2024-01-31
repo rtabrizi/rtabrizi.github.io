@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-Hi! I'm studying EECS at UC Berkeley and am advised by [Kurt Keutzer](https://people.eecs.berkeley.edu/~keutzer/). My interests are primarily in vision and language, building multimodal systems for robotics and other problems! This past summer, I was a research scientist with the Core Imaging team at insitro 🧬.
+Hi! I'm studying EECS at UC Berkeley and am advised by [Kurt Keutzer](https://people.eecs.berkeley.edu/~keutzer/). My interests are primarily in vision and language, building multimodal systems for robotics and other problems! This past summer, I was a research scientist with the Core Imaging team at insitro 🧬
 
 ### News
 - **December 2023:** Our [LLMCompiler pre-print](https://arxiv.org/abs/2312.04511) has been released!
