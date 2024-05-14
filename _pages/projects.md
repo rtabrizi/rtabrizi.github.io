@@ -7,6 +7,9 @@ redirect_from:
   - /project/
   - /projects.html
 ---
+
+## [Veggie World](../portfolio/veggie_world.html)
+
 ## [Advancing 3D Scene Understanding with Efficient and Focused Language Supervision](https://www.notion.so/Advancing-3D-Scene-Understanding-With-Efficient-and-Focused-Language-Supervision-e82fc5555907407093457d7abe3993c7)
 
 ## [Colorizing the Prokudin-Gorskii Photo Collection](../projects/180.html)
