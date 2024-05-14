@@ -11,6 +11,7 @@ redirect_from:
 Hi! I'm studying EECS at UC Berkeley and am advised by [Kurt Keutzer](https://people.eecs.berkeley.edu/~keutzer/). My interests are primarily in vision and language, building multimodal systems for robotics and other problems! This past summer, I was a research scientist with the Core Imaging team at insitro 🧬
 
 ### News
+- **May 2024:** [LLMCompiler](https://arxiv.org/abs/2312.04511) has been accepted to ICML 2024! See you in Vienna!
 - **December 2023:** Our [LLMCompiler pre-print](https://arxiv.org/abs/2312.04511) has been released!
 - **July 2023:** Accepted into EECS Honors Program.
 - **May 2023:** I'm now a research scientist at [insitro](https://insitro.com) with the Core Imaging team in the DS/ML division performing target validation with [DINO](https://ai.facebook.com/blog/dino-paws-computer-vision-with-self-supervised-transformers-and-10x-more-efficient-training/) and transformer autoencoders. My work is advised by Tommaso Dreossi. 
