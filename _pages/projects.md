@@ -8,7 +8,7 @@ redirect_from:
   - /projects.html
 ---
 
-## [Veggie World](../portfolio/veggie_world.html)
+## [Veggie World: Veggification 3D Style Transfer](../portfolio/veggie_world.html)
 
 ## [Advancing 3D Scene Understanding with Efficient and Focused Language Supervision](https://www.notion.so/Advancing-3D-Scene-Understanding-With-Efficient-and-Focused-Language-Supervision-e82fc5555907407093457d7abe3993c7)
 
