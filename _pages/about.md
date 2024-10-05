@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-Hi! I'm studying EECS at UC Berkeley, working on 3D vision with Professor [Angjoo Kanazawa](https://people.eecs.berkeley.edu/~kanazawa/) and world models with Professor [Trevor Darrell](https://people.eecs.berkeley.edu/~trevor/). I also [teach computer vision](https://cal-cs180.github.io/fa24/) with Professor [Alyosha Efros](https://people.eecs.berkeley.edu/~efros/) and previously worked with [Kurt Keutzer](https://people.eecs.berkeley.edu/~keutzer/) on efficient ML frameworks. My interests are primarily in visual representations for world understanding, whether those be 3D, video, or language.  
+Hi! I'm studying EECS at UC Berkeley, working on 3D vision with Professor [Angjoo Kanazawa](https://people.eecs.berkeley.edu/~kanazawa/) and [teaching computer vision](https://cal-cs180.github.io/fa24/) with Professor [Alyosha Efros](https://people.eecs.berkeley.edu/~efros/). I previously worked with [Kurt Keutzer](https://people.eecs.berkeley.edu/~keutzer/) on efficient ML frameworks. My interests are primarily in visual representations for world understanding, whether those be 3D, video, or embodied.
 
 ### News
 - **August 2024:** I started my position as a TA for [CS 180: Introduction to computer vision and computational photography.](https://cal-cs180.github.io/fa24/)
