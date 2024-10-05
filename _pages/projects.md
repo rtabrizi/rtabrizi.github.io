@@ -15,19 +15,21 @@ redirect_from:
 ## [Colorizing the Prokudin-Gorskii Photo Collection](../projects/180.html)
 
 ## <a href="../files/ConvexPolytopes.pdf">Convex Polytopes Are All You Need</a> 
-### Technical Report
 
 We took a deep dive into a [SOTA defense against adversarial attacks](https://arxiv.org/abs/1711.00851) which uses duality as a proof of defense against adversarial agents. **This is a draft**. 
+
+<div style="display: flex; justify-content: center;">
+ <img src="/images/adv_attacks.png" alt="Adversarial Attacks" width="400" height="300">
+ </div>
 
 ## [Sentieye 🧿](https://devpost.com/software/sentieye)
 ### Cal Hacks '23:
 
-Eye tracking and sentiment analysis from your own Zoom conference! Sentieye uses [XGaze](https://github.com/xucong-zhang/ETH-XGaze) for eye tracking which we then calibrate on top of your screen to visualize what catches your attention. Code release soon.
+Eye tracking and sentiment analysis from your own Zoom conference! Sentieye uses [XGaze](https://github.com/xucong-zhang/ETH-XGaze) for eye tracking which we then calibrate on top of your screen to visualize what catches your attention.
 
 <div style="display: flex;">
   <div style="flex: 1;">
-    <img src="/data/sentieye.png" alt="Sentieye" width="400"
-    height="300">
+    <img src="/images/sentieye.png" alt="Sentieye" width="400" height="300">
   </div>
   <div style="flex: 1;">
     <img src="/images/alberto.gif" alt="Sentieye" width="400" height="300">
@@ -41,7 +43,7 @@ Eye tracking and sentiment analysis from your own Zoom conference! Sentieye uses
 ## [Clarity 💫](https://devpost.com/software/clarity-ai)
 ### AISF '23 Hackathon **Winner**
 
-Clarity enables object segmentation and removal for your videos using META AI's [Segment Anything Model](https://segment-anything.com) (SAM) and diffusion models. Imagine: adblock for your own personal videos! Code release soon.
+Clarity enables object segmentation and removal for your videos using META AI's Segment Anything Model (SAM) and diffusion models. Imagine: adblock for your own personal videos!
 <div style="display: flex; justify-content: center;">
  <img src="/images/clarity.png" alt="Clarity" width="400" height="300">
  </div>
