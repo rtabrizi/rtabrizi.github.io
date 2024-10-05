@@ -8,10 +8,10 @@ redirect_from:
   - /about.html
 ---
 
-Hi! I'm studying EECS at UC Berkeley and am advised by [Kurt Keutzer](https://people.eecs.berkeley.edu/~keutzer/). My interests are primarily in visual representations for world understanding and multimodal systems.
+Hi! I'm studying EECS at UC Berkeley, working on 3D vision with Professor [Angjoo Kanazawa](https://people.eecs.berkeley.edu/~kanazawa/) and world models with Professor [Trevor Darrell](https://people.eecs.berkeley.edu/~trevor/). I also [teach computer vision](https://cal-cs180.github.io/fa24/) with Professor [Alyosha Efros](https://people.eecs.berkeley.edu/~efros/) and previously worked with [Kurt Keutzer](https://people.eecs.berkeley.edu/~keutzer/) on efficient ML frameworks. My interests are primarily in visual representations for world understanding, whether those be 3D, video, or language.  
 
 ### News
-- **August 2024:** I started my position as a paid 10-hour tutor/reader for CS 180: introduction to computer vision and computational photography.
+- **August 2024:** I started my position as a TA for [CS 180: Introduction to computer vision and computational photography.](https://cal-cs180.github.io/fa24/)
 - **June 2024:** I will be traveling to Seattle for CVPR 2024. See you there!
 - **May 2024:** [LLMCompiler](https://arxiv.org/abs/2312.04511) has been accepted to ICML 2024 See you in Vienna!
 - **December 2023:** Our [LLMCompiler pre-print](https://arxiv.org/abs/2312.04511) has been released!

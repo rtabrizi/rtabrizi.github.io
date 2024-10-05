@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: Some Books I've Read
+title: Reading
 author_profile: true
 permalink: /reading/
 ---
@@ -12,7 +12,7 @@ For the most updated list, please visit my <a href="https://www.goodreads.com/us
 <br> <br>
 
 <!-- Add a button to show all books -->
-<button id="toggleButton">Show All Books</button>
+<button id="toggleButton">Show Reviewed Books</button>
 
 <div class="reading-list">
   {% assign sorted_books = site.books | sort: 'date' | reverse %}
@@ -33,7 +33,7 @@ For the most updated list, please visit my <a href="https://www.goodreads.com/us
         <p><strong>Finished Reading:</strong> {{ book.date | date: "%B %d, %Y" }}</p>
       </div>
     {% else %}
-      <div class="book not-ready" style="display: none;">
+      <div class="book not-ready">
         <h2>{{ book.title }}</h2>
         <p><strong>Author:</strong> {{ book.author }}</p>
         <p><strong>Finished Reading:</strong> {{ book.date | date: "%B %d, %Y" }}</p>
@@ -45,19 +45,21 @@ For the most updated list, please visit my <a href="https://www.goodreads.com/us
 <script>
   var button = document.getElementById("toggleButton");
   var notReadyBooks = document.querySelectorAll(".not-ready");
+  var showingAllBooks = true;
   
   button.addEventListener("click", function() {
-    if (button.innerText === "Show All Books") {
-      button.innerText = "Show Reviewed Books";
-      notReadyBooks.forEach(function(book) {
-        book.style.display = "block";
-      });
-    } else {
+    if (showingAllBooks) {
       button.innerText = "Show All Books";
       notReadyBooks.forEach(function(book) {
         book.style.display = "none";
       });
+    } else {
+      button.innerText = "Show Reviewed Books";
+      notReadyBooks.forEach(function(book) {
+        book.style.display = "block";
+      });
     }
+    showingAllBooks = !showingAllBooks;
   });
 </script>
 
