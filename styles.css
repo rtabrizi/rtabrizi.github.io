@@ -1,0 +1,100 @@
+body {
+    margin: 40px auto;
+    max-width: 650px;
+    font: .8em/1.5 Helvetica;
+    color: #444;
+    font-size: 16px;
+    padding: 0 10px;
+}
+
+h1, h2, h3 {
+    line-height: 1.5;
+}
+
+div.title {
+    font-weight: bold;
+}
+
+li {
+    margin: 0.75em auto;
+    line-height: 1.4;
+}
+
+.socials {
+    margin-top: 1em;
+    text-align: left;
+}
+
+.socials a {
+    color: #444;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.content {
+    flex: 1;
+}
+
+.headshot {
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+}
+
+.bio-container {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+a {
+    color: navy;
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.teaching-list {
+    list-style: none;
+}
+
+.teaching-list .position {
+    font-weight: bold;
+    color: #444;
+}
+
+.teaching-list .date {
+    color: #666;
+    font-size: 0.9em;
+}
+
+.teaching-list .course {
+    margin: 0.2rem 0;
+}
+
+.teaching-list .course a {
+    text-decoration: none;
+}
+
+.teaching-list .achievements {
+    margin-top: 0.5rem;
+    font-size: 0.95em;
+}
+
+.text-content h1,
+.text-content h2,
+.text-content h3,
+.text-content h4,
+.text-content h5,
+.text-content h6 {
+    margin: 0;
+}
