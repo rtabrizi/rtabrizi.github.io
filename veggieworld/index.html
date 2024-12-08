@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Veggie World!</title>
+
+  
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Veggie World</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/rohan-mathur-78584118b">Rohan Mathur</a><sup>*</sup>,</span>
+            <span class="author-block">
+              <a href="https://ryantabrizi.com">Ryan Tabrizi</a><sup>*</sup></span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup></sup>University of California, Berkeley</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="../files/veggie_world.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <p> <b><sup>*</sup>Note:</b> some videos may take a minute to load.</p> -->
+
+<br>
+<br>
+
+<section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <div class="columns is-multiline">
+          <div class="column is-half">
+            <video autoplay muted loop playsinline width="100%">
+              <source src="./static/videos/dalle.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="column is-half">
+            <video autoplay muted loop playsinline width="100%">
+              <source src="./static/videos/bowl.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="column is-half">
+            <video autoplay muted loop playsinline width="100%">
+              <source src="./static/videos/efros_and_lisa.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="column is-half">
+            <video autoplay muted loop playsinline width="100%">
+              <source src="./static/videos/bottle.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <h2 class="subtitle has-text-centered">
+          <span class="dnerf">Veggie World</span> Veggifies 3D worlds from 2D images!
+        </h2>
+      </div>
+    </div>
+  </section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We present Veggie World, a method for rasterizing 3D scenes using any set of 3D assets, in our case, vegetables. Veggie World builds off Nerfstudio's Gaussian Splatting library to Veggify 3D reconstructions through our Veggie Regularization techniques during training, and render our Veggie Worlds using Blender without the need for diffusion or other neural-based extensions. In addition to visually pleasing Veggified renders of real-world scenes, Veggie World also poses an interesting research question on the importance of texture and 3D structure in image classification. 
+
+            Please refer to the paper PDF for more technical details.
+          </p>
+          <!-- <p>
+            Our approach augments neural radiance fields
+            (NeRF) by optimizing an
+            additional continuous volumetric deformation field that warps each observed point into a
+            canonical 5D NeRF.
+            We observe that these NeRF-like deformation fields are prone to local minima, and
+            propose a coarse-to-fine optimization method for coordinate-based models that allows for
+            more robust optimization.
+            By adapting principles from geometry processing and physical simulation to NeRF-like
+            models, we propose an elastic regularization of the deformation field that further
+            improves robustness.
+          </p> -->
+          <!-- <p>
+            We show that <span class="dnerf">Veggie World</span> can turn casually captured selfie
+            photos/videos into deformable NeRF
+            models that allow for photorealistic renderings of the subject from arbitrary
+            viewpoints, which we dub <i>"Veg"</i>. We evaluate our method by collecting data
+            using a
+            rig with two mobile phones that take time-synchronized photos, yielding train/validation
+            images of the same pose at different viewpoints. We show that our method faithfully
+            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
+            fidelity.
+          </p> -->
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+
+      <!-- Visual Effects. -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Semantically-similar Outputs</h2>
+          <img id="dollyzoom" src="./static/images/controller.png" alt="Controller Image" style="width: 100%; height: auto;">
+          <p>
+            Even after Veggification, outputs are still semantically similar to the original scene! In our human evaluations, we've observed that the original scene is correctly identified most of the time.
+          </p>
+          
+        </div>
+      </div>
+      <!--/ Visual Effects. -->
+
+      <!-- Matting. -->
+      <div class="column">
+        <h2 class="title is-3">High Frequency Features</h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <img id="dollyzoom" src="./static/images/high_freq.png" alt="High-Freq Image" style="width: 100%; height: auto;">
+            <p>
+              Veggies can model high-frequency features in natural scenes! Here, Veggie World optimizes Gaussians into carrots and sweet peppers due to their shape.
+              In this scene, the thin, flat sides of the bowl are modeled with an
+              abundance of carrots and sweet peppers to accurately capture the
+              high-frequency features.
+            </p>
+            
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!--/ Matting. -->
+
+    <br>
+
+<div class="column">
+  <div class="content">
+    <h2 class="title is-3">Dropout Success</h2>
+    <img id="dropout-results" src="./static/images/dropout_results2.png" alt="Dropout Results Image" style="width: 100%; height: auto;">
+    <p>
+      Top: garlic results without Veggie dropout. We see that carrots and sweet peppers dominate with over 70,000 and 50,000 occurances respectively. We attribute this to the many high-frequency features needed to model the edges of the garlic bulb, resulting in many Gaussians transforming to these vegetables during training. Bottom: results with a Veggie dropout ratio of $\frac{1}{6}$. Upon applying Veggie dropout, carrots and sweet peppers no longer dominate the distribution of vegetables and the distribution of vegetable counts becomes less more uniform. The diverse distribution of vegetables yields object surfaces that are more covered/dense, as the small high-frequency carrots and sweet-peppers no longer dominate the distribution, allowing other larger vegetables to populate the scene. Note: we felt that the peach asset was distorted and manually opt to exclude peaches from our Veggified outputs.
+    </p>
+    
+  </div>
+</div>
+
+<br>
+<br>
+<br>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Veggie World Up Close!</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/dalle.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/bowl.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/efros_and_lisa.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/bottle.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Veggie World Fly-Through!</h2>
+      <video autoplay controls muted loop playsinline width="100%">
+        <source src="./static/videos/staff_flythrough.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{veggieworld2024,
+  author    = {Mathur, Rohan and Tabrizi, Ryan},
+  title     = {Veggie World},
+  journal   = {arXiv},
+  year      = {2024},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="../files/veggie_world.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <!-- <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p> -->
+          <p>
+            We thank the <a href="https://nerfies.github.io/">Nerfies authors</a> for providing us with this <a href="https://github.com/nerfies/nerfies.github.io">website template</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
