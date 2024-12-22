@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Some of My Projects</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Project specific styles */
+        .project {
+            margin-bottom: 40px;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .image-container img {
+            max-width: 400px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Ryan Tabrizi</h1>
+            <p class="nav">
+                <a href="index.html">about</a> |
+                <a href="teaching.html">teaching</a> |
+                <a href="bookshelf.html">bookshelf</a> |
+                <a href="projects.html">projects</a> |
+                <a href="cv.html">cv</a>
+            </p>
+
+            <h1>Some of My Projects</h1>
+
+            <div class="project">
+                <h2><a href="../portfolio/veggie_world.html">Veggie World: Veggification 3D Style Transfer</a></h2>
+            </div>
+
+            <div class="project">
+                <h2><a href="https://www.notion.so/Advancing-3D-Scene-Understanding-With-Efficient-and-Focused-Language-Supervision-e82fc5555907407093457d7abe3993c7">
+                    Advancing 3D Scene Understanding with Efficient and Focused Language Supervision
+                </a></h2>
+            </div>
+
+            <div class="project">
+                <h2><a href="../files/ConvexPolytopes.pdf">Convex Polytopes Are All You Need</a></h2>
+                <p>We took a deep dive into a <a href="https://arxiv.org/abs/1711.00851">SOTA defense against adversarial attacks</a> 
+                which uses duality as a proof of defense against adversarial agents. <strong>This is a draft</strong>.</p>
+                <div class="image-container">
+                    <img src="/images/adv_attacks.png" alt="Adversarial Attacks">
+                </div>
+            </div>
+
+            <div class="project">
+                <h2><a href="https://devpost.com/software/sentieye">Sentieye 🧿</a></h2>
+                <h3>Cal Hacks '23:</h3>
+                <p>Eye tracking and sentiment analysis from your own Zoom conference! Sentieye uses 
+                <a href="https://github.com/xucong-zhang/ETH-XGaze">XGaze</a> for eye tracking which we then calibrate 
+                on top of your screen to visualize what catches your attention.</p>
+                <div class="image-container">
+                    <img src="/images/sentieye.png" alt="Sentieye">
+                    <img src="/images/alberto.gif" alt="Sentieye Demo">
+                </div>
+            </div>
+
+            <!-- Continue with other projects following the same pattern -->
+        </div>
+    </div>
+</body>
+</html>
