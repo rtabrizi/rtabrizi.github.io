@@ -1,7 +1,7 @@
 body {
     margin: 40px auto;
     max-width: 650px;
-    font: .8em/1.5 Helvetica;
+    font-family: 'IBM Plex Sans', sans-serif;
     color: #444;
     font-size: 16px;
     padding: 0 10px;
@@ -55,7 +55,8 @@ li {
 }
 
 a {
-    color: navy;
+    /* color: navy; */
+    color: black;
     text-decoration: underline;
 }
 
@@ -97,4 +98,14 @@ a:hover {
 .text-content h5,
 .text-content h6 {
     margin: 0;
+}
+
+a::selection {
+    background-color: black;
+    color: white;
+}
+
+::selection {
+    background-color: black;
+    color: white;
 }
